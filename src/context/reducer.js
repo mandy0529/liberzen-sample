@@ -40,15 +40,13 @@ const reducer = (state, action) => {
 
     case clickOpenModal:
       const {month} = action.payload;
-      console.log(month, 'month');
-      console.log(state.clothes, 'clothes');
       const {img} = state.clothes.find((items) => {
         return items.month === month;
       });
-
       return {
         ...state,
         isModalOpen: true,
+        monthData: img,
       };
     case clickCloseModal:
       return {

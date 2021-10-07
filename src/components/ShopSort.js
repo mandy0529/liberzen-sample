@@ -75,7 +75,7 @@ const Wrapper = styled.section`
     button {
       background: transparent;
       border: 1px solid var(--clr-black);
-      color: var(--clr-black);
+      color: black;
       width: 1.5rem;
       border-radius: var(--radius);
       height: 1.5rem;
@@ -89,7 +89,7 @@ const Wrapper = styled.section`
     }
     .active {
       background: var(--clr-black);
-      color: var(--clr-white);
+      color: white;
     }
   }
 

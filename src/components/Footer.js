@@ -56,7 +56,7 @@ const Wrapper = styled.footer`
   }
   a {
     margin: 5px;
-    font-size: 1.5rem;
+    font-size: 1.5 rem;
     color: white;
     &:hover .facebook,
     &:hover .insta {

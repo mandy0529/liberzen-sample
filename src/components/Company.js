@@ -42,12 +42,9 @@ const Wrapper = styled.section`
   .featured {
     margin: 4rem auto;
     img {
-      width: 300px;
-      height: 400px;
+      width: 200px;
+      height: 300px;
       border-radius: 10px;
-      box-shadow: 0px -1px 17px 5px rgba(255, 255, 255, 0.75);
-      -webkit-box-shadow: 0px -1px 17px 5px rgba(255, 255, 255, 0.75);
-      -moz-box-shadow: 0px -1px 17px 5px rgba(255, 255, 255, 0.75);
     }
   }
   h2 {
@@ -98,6 +95,10 @@ const Wrapper = styled.section`
   }
   @media (min-width: 576px) {
     .featured {
+      img {
+        width: 300px;
+        height: 400px;
+      }
     }
     .logo-info {
       flex-direction: row;

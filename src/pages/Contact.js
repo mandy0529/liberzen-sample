@@ -84,10 +84,10 @@ const Wrapper = styled.main`
       font-weight: 500;
       display: flex;
       align-items: center;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
     .contact-icon {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-right: 2rem;
     }
     &:last-child {
@@ -118,11 +118,15 @@ const Wrapper = styled.main`
     }
   }
   .contact-footer {
+    display: none;
     text-align: center;
   }
 
   @media (min-width: 992px) {
     margin: 10rem 0;
+    .contact-footer {
+      display: block;
+    }
     .section-title {
       h2 {
         font-size: 2rem;

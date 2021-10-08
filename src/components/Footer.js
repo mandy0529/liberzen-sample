@@ -43,7 +43,7 @@ const Wrapper = styled.footer`
   }
   span {
     color: #beb2a2;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.3rem;
   }
@@ -56,7 +56,7 @@ const Wrapper = styled.footer`
   }
   a {
     margin: 5px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: white;
     &:hover .facebook,
     &:hover .insta {

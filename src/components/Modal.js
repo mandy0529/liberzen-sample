@@ -14,7 +14,6 @@ const Modal = () => {
     <Wrapper onClick={handleClick}>
       {monthData && (
         <div className={`modal ${isModalOpen && 'openModal'}`}>
-          <div>hello</div>
           <div className="box">
             <img
               className="modal-image"
@@ -46,8 +45,8 @@ const Wrapper = styled.div`
     visibility: visible;
   }
   .box {
-    margin: 3rem auto 0 auto;
-    max-width: 50vw;
+    margin: 8rem auto 0 auto;
+    max-width: 80vw;
     position: relative;
     .modal-image {
       width: 100%;
@@ -55,7 +54,7 @@ const Wrapper = styled.div`
   }
   .close-btn {
     position: absolute;
-    width: 3rem;
+    width: 2rem;
     height: 2rem;
     right: 0px;
     background-color: white;
@@ -63,6 +62,7 @@ const Wrapper = styled.div`
     border-radius: 4px;
     font-size: 2rem;
     cursor: pointer;
+    color: black;
     transition: all 300ms linear;
     &:hover {
       font-weight: bold;

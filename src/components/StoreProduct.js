@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StoreProduct = ({src, text, title, place, phone}) => {
+const StoreProduct = ({src, title, place, phone}) => {
   return (
     <Wrapper>
       <div className="container">
         <img src={src} alt={title} />
       </div>
       <footer>
-        <h5>{text} </h5>
-        <p>{place}</p>
+        <h5>{place} </h5>
         <p>{phone}</p>
       </footer>
     </Wrapper>
@@ -55,6 +54,9 @@ const Wrapper = styled.article`
   footer {
     margin-top: 1rem;
     text-align: left;
+    p {
+      margin: 0.5rem 0;
+    }
   }
   footer h5,
   footer p {

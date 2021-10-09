@@ -12,7 +12,7 @@ const Work = () => {
         </article>
         <div className="services-center">
           {services.map((service) => {
-            const {id, icon, title, text, src} = service;
+            const {id, icon, title, src} = service;
             return (
               <article key={id} className="service">
                 <img src={src} alt={title} />

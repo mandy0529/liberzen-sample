@@ -2,6 +2,8 @@ import {
   clickCloseModal,
   clickOpenModal,
   GET_DATA,
+  OFF_MUTED,
+  ON_MUTED,
   SET_GRIDVIEW,
   SET_LISTVIEW,
   SET_LOADING,
@@ -16,6 +18,7 @@ export const initialState = {
   grid_view: true,
   isModalOpen: false,
   monthData: [],
+  muted: true,
 };
 
 const reducer = (state, action) => {
@@ -48,12 +51,20 @@ const reducer = (state, action) => {
         isModalOpen: true,
         monthData: img,
       };
+
     case clickCloseModal:
       return {
         ...state,
         isModalOpen: false,
         monthData: [],
       };
+
+    case OFF_MUTED:
+      return {...state, muted: false};
+
+    case ON_MUTED:
+      return {...state, muted: true};
+
     default:
       throw new Error(`No Matching "${action.type}" - action type`);
   }

@@ -14,21 +14,18 @@ const Label = () => {
             <img src={logoBlack} alt="gold-logo" />
             <div className="logo-desc">
               <h3>Black </h3>
-              <p>모던한 현대 시민</p>
             </div>
           </div>
           <div className="logo-info">
             <img src={logoWhite} alt="gold-logo" />
             <div className="logo-desc">
               <h3>White </h3>
-              <p>사계절의 화이트</p>
             </div>
           </div>
           <div className="logo-info">
             <img src={logoBeige} alt="black-logo" />
             <div className="logo-desc">
               <h3>Beige </h3>
-              <p>봄, 가을의 베이지</p>
             </div>
           </div>
         </div>
@@ -74,8 +71,6 @@ const Wrapper = styled.section`
   }
   .logo-info:nth-child(2) {
     padding: 2rem 0;
-    border-bottom: 3px dotted black;
-    border-top: 3px dotted black;
   }
   .underline {
     width: 8rem;

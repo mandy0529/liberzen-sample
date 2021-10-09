@@ -19,7 +19,7 @@ const FeaturedProducts = () => {
         </div>
       </div>
       <Link to="/shop/2021" className="btn">
-        더 많은 제품 보러가기
+        All Collections
       </Link>
     </Wrapper>
   );

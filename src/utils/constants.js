@@ -2,7 +2,7 @@ import React from 'react';
 import {GiRolledCloth, GiClothespin} from 'react-icons/gi';
 import {FaStore} from 'react-icons/fa';
 import pattern from '../assets/pattern.jpeg';
-import design from '../assets/work2.jpeg';
+import design from '../assets/design.jpeg';
 import store from '../assets/store.jpeg';
 import {clothes1, clothes2, clothes3, store1, store2, store3} from '../assets';
 
@@ -83,23 +83,23 @@ export const stores = [
     title: 'store1',
     src: store1,
     text: 'store place',
-    place: '서울점',
-    phone: '02-3456-7890',
+    place: '벨포스트 Store',
+    phone: '02-2254-2626',
   },
   {
     id: 'st_2',
     title: 'store2',
     src: store2,
     text: 'store place',
-    place: '인천점',
-    phone: '02-3456-7890',
+    place: 'APM Store',
+    phone: '02-2250-1711',
   },
   {
     id: 'st_3',
     title: 'store3',
     src: store3,
     text: 'store place',
-    place: '잠실점',
-    phone: '02-3456-7890',
+    place: '유어스 Store',
+    phone: '02-6270-1017',
   },
 ];

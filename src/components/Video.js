@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import HeroVideo from '../assets/liberzen.mp4';
+import {useGlobalContext} from '../context/AppContext';
+import {VscUnmute, VscMute} from 'react-icons/vsc';
+
 const Video = () => {
+  const {handleVolume, muted} = useGlobalContext();
+  const soundRef = useRef();
   return (
     <Wrapper className="section-center">
       <article className="img-container">
@@ -13,7 +18,15 @@ const Video = () => {
           muted={true}
           autoPlay={true}
           loop
+          ref={soundRef}
         />
+        <div onClick={() => handleVolume(soundRef.current)} className="sound">
+          {muted ? (
+            <VscMute className="mute-icon" />
+          ) : (
+            <VscUnmute className="mute-icon" />
+          )}
+        </div>
       </article>
       <article className="content">
         <h1>
@@ -21,10 +34,12 @@ const Video = () => {
         </h1>
         <div className="underline" />
         <p>
-          <strong>Live</strong> your dream. <br />
-          <strong>Wear</strong> your Passion.
-          <br />
-          You can get it with Liberzen, <br />
+          Any Designs, <br />
+          Any Patterns, <br />
+          Any Fabrics, <br />
+          이를 리버젠식 풀이로 <br />
+          자르고, 박고, 다음어 <br />
+          저마다의 나다움으로
         </p>
         <Link to="/contact" className="btn hero-btn">
           contact us
@@ -36,10 +51,6 @@ const Video = () => {
 const Wrapper = styled.section`
   margin-top: 3rem;
   min-height: 80vh;
-  .main-img {
-    width: 100%;
-    height: 240px;
-  }
   .video-content {
     max-width: 100%;
     max-height: 100%;
@@ -47,14 +58,35 @@ const Wrapper = styled.section`
     -webkit-box-shadow: -3px 7px 42px -1px rgba(0, 0, 0, 0.69);
     -moz-box-shadow: -3px 7px 42px -1px rgba(0, 0, 0, 0.69);
     border-radius: 10px;
+    position: relative;
   }
+  .sound {
+    position: absolute;
+    transform: translate(20%, -300%);
+    padding: 10px;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+  }
+  .mute-icon {
+    transition: all 0.3s linear;
+  }
+  .sound:hover .mute-icon {
+    color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .main-img {
+    width: 100%;
+    height: 240px;
+  }
+
   .accent-img {
     display: none;
   }
   .img-container {
     width: 100%;
     display: block;
-    position: relative;
     margin-bottom: 4rem;
   }
   .content {
@@ -121,6 +153,10 @@ const Wrapper = styled.section`
       width: 250px;
       transform: translateX(-50%);
       border-radius: var(—radius);
+    }
+    .sound {
+      transform: translate(20%, -180%);
+      font-size: 2rem;
     }
   }
 `;

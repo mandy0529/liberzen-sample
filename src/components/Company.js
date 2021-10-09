@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {ImArrowDown} from 'react-icons/im';
-import fashion1 from '../assets/model.jpeg';
+import fashion1 from '../assets/white.jpeg';
 
 const Company = () => {
   return (

@@ -1,8 +1,16 @@
-import React, {createContext, useContext, useReducer, useState} from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from 'react';
 import {
   clickCloseModal,
   clickOpenModal,
   GET_DATA,
+  OFF_MUTED,
+  ON_MUTED,
   SET_GRIDVIEW,
   SET_LISTVIEW,
   SET_LOADING,
@@ -70,6 +78,22 @@ const AppProvider = ({children}) => {
     closeModal();
   };
 
+  const handleVolume = (video) => {
+    const volume = video.muted;
+    console.log(volume, 'volume');
+    if (volume) {
+      video.muted = false;
+      dispatch({type: OFF_MUTED});
+    } else {
+      video.muted = true;
+      dispatch({type: ON_MUTED});
+    }
+  };
+
+  useEffect(() => {
+    state.muted = false;
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -83,6 +107,7 @@ const AppProvider = ({children}) => {
         openModal,
         handleClick,
         showPhoto,
+        handleVolume,
       }}
     >
       {children}
